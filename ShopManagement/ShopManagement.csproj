@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A043846-B5BB-4E79-BC19-9232DA35B785}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ShopManagement</RootNamespace>
+    <AssemblyName>ShopManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\AccountBUS.cs" />
+    <Compile Include="BUS\BillBUS.cs" />
+    <Compile Include="BUS\BillInforBUS.cs" />
+    <Compile Include="BUS\CatergoryBUS.cs" />
+    <Compile Include="BUS\FoodBUS.cs" />
+    <Compile Include="BUS\MenuBUS.cs" />
+    <Compile Include="BUS\TableBUS.cs" />
+    <Compile Include="DAL\ProviderDAL.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\BillDTO.cs" />
+    <Compile Include="DTO\BillInforDTO.cs" />
+    <Compile Include="DTO\CategoryDTO.cs" />
+    <Compile Include="DTO\FoodDTO.cs" />
+    <Compile Include="DTO\MenuDTO.cs" />
+    <Compile Include="DTO\PasswordCodeDTO.cs" />
+    <Compile Include="DTO\TableDTO.cs" />
+    <Compile Include="GUI\frmAccountProfileGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAccountProfileGUI.Designer.cs">
+      <DependentUpon>frmAccountProfileGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAdminGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmAdminGUI.Designer.cs">
+      <DependentUpon>frmAdminGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLoginGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLoginGUI.Designer.cs">
+      <DependentUpon>frmLoginGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmManagerGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmManagerGUI.Designer.cs">
+      <DependentUpon>frmManagerGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmRegisterGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmRegisterGUI.Designer.cs">
+      <DependentUpon>frmRegisterGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmAccountProfileGUI.resx">
+      <DependentUpon>frmAccountProfileGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAdminGUI.resx">
+      <DependentUpon>frmAdminGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLoginGUI.resx">
+      <DependentUpon>frmLoginGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmManagerGUI.resx">
+      <DependentUpon>frmManagerGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRegisterGUI.resx">
+      <DependentUpon>frmRegisterGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\Data.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
