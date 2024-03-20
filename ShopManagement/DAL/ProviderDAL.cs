@@ -13,7 +13,7 @@ namespace Coffee.DAL
         public static ProviderDAL Instance { get => _instance ?? new ProviderDAL(); private set => _instance = value; }
         private ProviderDAL() { }
 
-        private readonly string connString = "Data Source=.\\sqlexpress;Initial Catalog=StoreManage;Integrated Security=True";
+        private readonly string connString = "Data Source=.\\sqlexpress;Initial Catalog=ShopManage;Integrated Security=True";
         public DataTable ExecuteQuery(string query)
         {
             var dt = new DataTable();
